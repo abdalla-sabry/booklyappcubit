@@ -3,6 +3,7 @@ import 'package:booklyappcubit/Future/splash/presentation/views/splashScreen.dar
 import 'package:booklyappcubit/constant.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 void main(){
   runApp(BooklyApp());
 
@@ -12,7 +13,7 @@ class BooklyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
         debugShowCheckedModeBanner: false,
       theme: ThemeData.dark().copyWith(
         scaffoldBackgroundColor: kPrimaryColor
