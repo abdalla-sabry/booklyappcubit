@@ -1,3 +1,4 @@
+import 'package:booklyappcubit/Future/homeVeiw/presentaion/view/widght/MaincodeInHomwVeiw.dart';
 import 'package:booklyappcubit/constant.dart';
 import 'package:booklyappcubit/core/utilize/ContenerImages.dart';
 import 'package:booklyappcubit/core/utilize/logo.dart';
@@ -31,40 +32,8 @@ class HomeScreen extends StatelessWidget {
               )),
         ],
       ),
-      body: Column(
-        children: [
-          Padding(
-            padding: EdgeInsets.only(left: 22.5, top: 30),
-            child: Container(
-              height: 300,
-              child: ListView.separated(
-                separatorBuilder: (context, index) {
-                  return SizedBox(
-                    height: 10,
-                    width: 7.5,
-                  );
-                },
-                scrollDirection: Axis.horizontal,
-                itemBuilder: (context, counter) => listImageContener[counter],
-                itemCount: listImageContener.length,
-              ),
-            ),
-          ),
-          Padding(
-            padding: EdgeInsets.only(left: 30.0, top: 48),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                Text(
-                  'Best Seller',
-                  style:
-                      GoogleFonts.montserrat(fontSize: 15, color: Colors.white),
-                ),
-              ],
-            ),
-          )
-        ],
-      ),
+      body: MainCodeInHomeVeiw(listImageContener: listImageContener),
     );
   }
 }
+
