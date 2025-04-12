@@ -32,7 +32,7 @@ class HomeScreen extends StatelessWidget {
               )),
         ],
       ),
-      body: MainCodeInHomeVeiw(listImageContener: listImageContener),
+      body: MainCodeInHomeVeiw(),
     );
   }
 }

@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import '../../Future/homeVeiw/presentaion/viewModel/BookDateModel.dart';
 
 class Contenerimages extends StatelessWidget {
-String? imagePass;
 double? hight;
 BookDateModel?BookData;
   Contenerimages(
@@ -22,7 +21,7 @@ required this.BookData,required this.hight
         child: Container(
 
           decoration: BoxDecoration(
-           image: DecorationImage(image: NetworkImage(BookData!.imagePass!),
+           image: DecorationImage(image: NetworkImage('${BookData?.thumbnail}'),
            fit: BoxFit.fill),
             borderRadius: BorderRadius.circular(15)
           ),

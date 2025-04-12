@@ -12,13 +12,13 @@ BookDateModel bookDate;
       children: [
         Padding(
           padding:  EdgeInsets.only(top: 4.0),
-          child: Text(bookDate.bookName!,style: GoogleFonts.playfair(
+          child: Text(bookDate. title!,style: GoogleFonts.playfair(
             fontSize: 20,color: Colors.white,
           ),maxLines: 2,overflow: TextOverflow.ellipsis,),
         ),
         Padding(
           padding:  EdgeInsets.only(top: 2.0),
-          child: Text(bookDate.writerName!,style: GoogleFonts.playfair(
+          child: Text(bookDate.authors[0]!,style: GoogleFonts.playfair(
             fontSize: 14,color: Color(0xff707070),
           ),maxLines: 1,overflow: TextOverflow.ellipsis,),
         ),
@@ -28,7 +28,7 @@ BookDateModel bookDate;
             mainAxisAlignment: MainAxisAlignment
             .start,
             children: [
-              Text('${bookDate.prise!}',style: GoogleFonts.playfair(
+              Text('${bookDate.price!}',style: GoogleFonts.playfair(
                 fontSize: 20,color: Colors.white,
               ),maxLines: 1,overflow: TextOverflow.ellipsis,),
               ContenerForRateAndNumeberSelling(bookdata: bookDate,)
@@ -61,7 +61,7 @@ BookDateModel bookdata;
           ),
         ),Padding(
     padding:  EdgeInsets.only(top: 2.0),
-    child: Text(bookdata.writerName!,style: GoogleFonts.playfair(
+    child: Text("bookdata.!",style: GoogleFonts.playfair(
     fontSize: 14,color: Color(0xff707070),
     ),maxLines: 1,overflow: TextOverflow.ellipsis,),)
       ],

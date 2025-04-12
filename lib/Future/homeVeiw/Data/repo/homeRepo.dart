@@ -16,7 +16,9 @@ class HomePageMehtod extends HomeRepe {
     Dio dio = Dio();
     try {
       Response response =
-      await dio.get(url, queryParameters: {'q': catioresForBooks});
+      await dio.get(kUrl, queryParameters: {'q': catioresForBooks});
+      print('+++++++++++++++++++++++++++++++++++++++++  ')  ;
+      print('+++++++++++++++++++++++++++++++++++++++++  ')  ;
       List items=response.data['items'];
       if(items == null){
 print('the list is null');
@@ -26,6 +28,7 @@ print('the list is null');
         for (var item in items){
           booksDataModel.add(BookDateModel.fromJson(item));
         }
+        print('finsh get data succuse');
         return booksDataModel;
       }
     }catch(e){

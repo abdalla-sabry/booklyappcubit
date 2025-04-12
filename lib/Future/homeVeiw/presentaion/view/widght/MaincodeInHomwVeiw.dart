@@ -9,16 +9,14 @@ import 'ListVeiwImages.dart';
 class MainCodeInHomeVeiw extends StatelessWidget {
   const MainCodeInHomeVeiw({
     super.key,
-    required this.listImageContener,
   });
 
-  final List<Contenerimages> listImageContener;
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
-        listveiwforImages(listImageContener: listImageContener),
+        listveiwforImages(),
         Bestsellerwidgt()
       ],
     );
