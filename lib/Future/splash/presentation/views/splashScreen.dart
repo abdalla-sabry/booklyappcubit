@@ -1,4 +1,4 @@
-import 'package:booklyappcubit/Future/splash/presentation/views/homeScreen.dart';
+import 'package:booklyappcubit/Future/homeVeiw/presentaion/view/homeScreen.dart';
 import 'package:booklyappcubit/constant.dart';
 import 'package:booklyappcubit/core/utilize/AssetsData.dart';
 import 'package:booklyappcubit/core/utilize/themeColorModel.dart';

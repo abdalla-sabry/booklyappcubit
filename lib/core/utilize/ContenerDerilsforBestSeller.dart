@@ -1,4 +1,4 @@
-import 'package:booklyappcubit/Future/splash/presentation/viewsModel/BookDateModel.dart';
+import 'package:booklyappcubit/Future/homeVeiw/presentaion/viewModel/BookDateModel.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';

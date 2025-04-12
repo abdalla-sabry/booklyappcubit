@@ -1,27 +1,32 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import '../../Future/splash/presentation/viewsModel/BookDateModel.dart';
+import '../../Future/homeVeiw/presentaion/viewModel/BookDateModel.dart';
 
 class Contenerimages extends StatelessWidget {
 String? imagePass;
-double? hight,width;
+double? hight;
 BookDateModel?BookData;
   Contenerimages(
 {
-required this.BookData,required this.width,required this.hight
+required this.BookData,required this.hight
 }
       );
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-height: hight,
-      width: width,
-      decoration: BoxDecoration(
-       image: DecorationImage(image: NetworkImage(BookData!.imagePass!),
-       fit: BoxFit.fill),
-        borderRadius: BorderRadius.circular(15)
+    return AspectRatio(
+      aspectRatio: .66,
+      child: SizedBox(
+        height: hight,
+        child: Container(
+
+          decoration: BoxDecoration(
+           image: DecorationImage(image: NetworkImage(BookData!.imagePass!),
+           fit: BoxFit.fill),
+            borderRadius: BorderRadius.circular(15)
+          ),
+        ),
       ),
     );
   }

@@ -1,4 +1,4 @@
-import 'package:booklyappcubit/Future/splash/presentation/viewsModel/BookDateModel.dart';
+import 'package:booklyappcubit/Future/homeVeiw/presentaion/viewModel/BookDateModel.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -14,7 +14,7 @@ final BookDateModel bookData;
       padding:  EdgeInsets.only(left:30 ,bottom: 40),
       child: Row(
         children: [
-          Contenerimages(BookData: bookData, width: 70, hight: 105),
+          Contenerimages(BookData: bookData,  hight: 105),
         ],
       ),
     );
