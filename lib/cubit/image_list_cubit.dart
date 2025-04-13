@@ -14,7 +14,7 @@ class ImageListCubit extends Cubit<ImageListState> {
       emit(stateImageListLoading());
       HomePageMehtod getDataModel = HomePageMehtod();
       listBooksModels = await getDataModel.FetchBestSellerBooks(
-          catioresForBooks: 'hairy potter');
+          catioresForBooks: 'sipederman');
 
       int i = 0;
       for (var book in listBooksModels) {

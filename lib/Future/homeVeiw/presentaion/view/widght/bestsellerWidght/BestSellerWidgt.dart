@@ -1,3 +1,4 @@
+import 'package:booklyappcubit/core/utilize/fontStyle.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -12,7 +13,7 @@ class Bestsellerwidgt extends StatelessWidget {
       child: Row(mainAxisAlignment: MainAxisAlignment.start, children: [
         Text(
           'Best Seller',
-          style: GoogleFonts.montserrat(fontSize: 15, color: Colors.white),
+          style: styleForText.styleText18,
         ),
       ]),
     );
