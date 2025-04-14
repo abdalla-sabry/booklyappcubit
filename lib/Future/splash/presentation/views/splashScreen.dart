@@ -70,11 +70,11 @@ class _SplashscreenState extends State<Splashscreen>
   }
   void GetNavigateWithDelaye() {
     Future.delayed(const Duration(seconds: 3),() {
-      Get.to(
-        HomeScreen(),
-        transition: Transition.fade, // or any other transition
-        duration: Duration(milliseconds: 500), // optional
-      );
+      Navigator.pushReplacement(context,
+        MaterialPageRoute(
+          builder: (context) => HomeScreen( ), // Replace with your widget
+        ),
+      );;
     },);
   }
 

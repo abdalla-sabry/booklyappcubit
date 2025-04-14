@@ -17,10 +17,8 @@ class Bradgebeforebestsellerwidgt extends StatelessWidget {
 
         return state is stateImageListLoading
             ? Container(
-                child: Expanded(
-                  child: Center(
-                    child: CircularProgressIndicator(),
-                  ),
+                child: Center(
+                  child: CircularProgressIndicator(),
                 ),
               )
             : state is stateImageListFailure
@@ -30,10 +28,8 @@ class Bradgebeforebestsellerwidgt extends StatelessWidget {
                 : state is stateImageListSuccuse
                     ?  Bestsellerwidgt(listOfBookDateModel: BlocProvider.of<ImageListCubit>(context).listBooksModels,)
                     : Container(
-                        child: Expanded(
-                          child: Center(
-                            child: CircularProgressIndicator(),
-                          ),
+                        child: Center(
+                          child: CircularProgressIndicator(),
                         ),
                       );
       },

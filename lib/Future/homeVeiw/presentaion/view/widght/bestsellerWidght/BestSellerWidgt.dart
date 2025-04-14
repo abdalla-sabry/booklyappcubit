@@ -15,23 +15,20 @@ class Bestsellerwidgt extends StatelessWidget {
       Padding(
       padding: const EdgeInsets.only(left: 33, right: 10, bottom: 10),
       child:
-      Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-        SizedBox(
-          height: 280,
-          child: ListView.separated(
-            separatorBuilder: (context, counter) {
-              return SizedBox(
-                height: 29,
-                width: 300,
-              );
-            },
-            itemCount: listOfBookDateModel.length,
-            itemBuilder: (context, counter) {
-              return Bestsellercontainer(bookDateModel: listOfBookDateModel[counter], );
-            },
-          ),
-        ),
-      ]),
+      ListView.separated(
+        shrinkWrap: true,
+        physics: NeverScrollableScrollPhysics(),
+        separatorBuilder: (context, counter) {
+          return SizedBox(
+            height: 29,
+            width: 300,
+          );
+        },
+        itemCount: listOfBookDateModel.length,
+        itemBuilder: (context, counter) {
+          return Bestsellercontainer(bookDateModel: listOfBookDateModel[counter], );
+        },
+      ),
     );
   }
 }

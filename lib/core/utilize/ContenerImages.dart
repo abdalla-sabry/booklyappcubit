@@ -1,3 +1,4 @@
+import 'package:booklyappcubit/Future/BookVeiw/presntaion/view/BookDetilesView.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -14,16 +15,21 @@ required this.BookData,required this.hight
 
   @override
   Widget build(BuildContext context) {
-    return AspectRatio(
-      aspectRatio: .66,
-      child: SizedBox(
-        height: hight,
-        child: Container(
+    return GestureDetector(
+      onTap: (){Navigator.pushNamed(
+          context,BookDetilesView.routeName,arguments: BookData
+      );},
+      child: AspectRatio(
+        aspectRatio: .66,
+        child: SizedBox(
+          height: hight,
+          child: Container(
 
-          decoration: BoxDecoration(
-           image: DecorationImage(image: NetworkImage('${BookData?.thumbnail}'),
-           fit: BoxFit.fill),
-            borderRadius: BorderRadius.circular(15)
+            decoration: BoxDecoration(
+             image: DecorationImage(image: NetworkImage('${BookData?.thumbnail}'),
+             fit: BoxFit.fill),
+              borderRadius: BorderRadius.circular(15)
+            ),
           ),
         ),
       ),

@@ -16,10 +16,9 @@ class listveiwforImages extends StatelessWidget {
 
         return state is stateImageListLoading
             ? Container(
-                child: Expanded(
-                  child: Center(
-                    child: CircularProgressIndicator(),
-                  ),
+          height: 300,
+                child: Center(
+                  child: CircularProgressIndicator(),
                 ),
               )
             : state is stateImageListFailure
@@ -49,10 +48,9 @@ class listveiwforImages extends StatelessWidget {
                         ),
                       )
                     : Container(
-                        child: Expanded(
-                          child: Center(
-                            child: CircularProgressIndicator(),
-                          ),
+          height: 300,
+                        child: Center(
+                          child: CircularProgressIndicator(),
                         ),
                       );
       },

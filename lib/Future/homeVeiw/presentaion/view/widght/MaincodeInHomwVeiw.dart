@@ -18,22 +18,24 @@ class MainCodeInHomeVeiw extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
-        return Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            listveiwforImages(),
-            Padding(
-              padding:
-              EdgeInsets.only(left: 30, top: 39, bottom: 22),
-              child: Text(
-                'Best Seller',
-                style: styleForText.styleText18,
-              ),
+    return CustomScrollView(
+      slivers: [
+        SliverToBoxAdapter(
+          child: listveiwforImages(),
+        ),
+        SliverToBoxAdapter(
+          child: Padding(
+            padding: EdgeInsets.only(left: 30, top: 39, bottom: 22),
+            child: Text(
+              'Best Seller',
+              style: styleForText.styleText18,
             ),
-           Bradgebeforebestsellerwidgt()
-          ],
-        );
-
-}}
-
+          ),
+        ),
+        SliverToBoxAdapter(
+          child: Bradgebeforebestsellerwidgt(),
+        )
+      ],
+    );
+  }
+}
