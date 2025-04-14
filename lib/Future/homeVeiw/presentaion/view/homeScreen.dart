@@ -13,7 +13,7 @@ class HomeScreen extends StatelessWidget {
   HomeScreen({super.key});
   static const String routeName = 'home screen';
 
-  List<Contenerimages> listImageContener = [];
+  List<Contenarimages> listImageContener = [];
 
   Widget build(BuildContext context) {
     return Scaffold(

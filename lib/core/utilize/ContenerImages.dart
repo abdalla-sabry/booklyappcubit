@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 
 import '../../Future/homeVeiw/presentaion/viewModel/BookDateModel.dart';
 
-class Contenerimages extends StatelessWidget {
+class Contenarimages extends StatelessWidget {
 double? hight;
 BookDateModel?BookData;
-  Contenerimages(
+  Contenarimages(
 {
 required this.BookData,required this.hight
 }

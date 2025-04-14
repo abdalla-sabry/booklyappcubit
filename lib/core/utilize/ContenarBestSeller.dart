@@ -14,7 +14,7 @@ final BookDateModel bookData;
       padding:  EdgeInsets.only(left:30 ,bottom: 40),
       child: Row(
         children: [
-          Contenerimages(BookData: bookData,  hight: 105),
+          Contenarimages(BookData: bookData,  hight: 105),
         ],
       ),
     );
