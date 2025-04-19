@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/get.dart';
 
-import 'cubit/image_list_cubit.dart';
+import 'Future/homeVeiw/manger/image_list_cubit.dart';
 
 void main() {
   runApp(BooklyApp());
@@ -19,7 +19,7 @@ class BooklyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => ImageListCubit(),
+      create: (context) => CubitForApi(),
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         theme: ThemeData.dark().copyWith(

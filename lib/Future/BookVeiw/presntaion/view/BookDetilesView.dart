@@ -5,28 +5,39 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class BookDetilesView extends StatelessWidget {
-  BookDetilesView({super.key});
-static const String routeName='BookDetilesView';
+  BookDetilesView();
+  static const String routeName = 'BookDetilesView';
   @override
   Widget build(BuildContext context) {
-    final bookData = ModalRoute.of(context)?.settings.arguments as BookDateModel?;
-
+    BookDateModel  bookDateModel=ModalRoute.of(context)?.settings.arguments as BookDateModel;
     return Scaffold(
       appBar: AppBar(
-        backgroundColor:kPrimaryColor ,
+        backgroundColor: kPrimaryColor,
         leading: Padding(
           padding: EdgeInsets.only(left: 30),
-          child: Icon(Icons.close,size: 32,color: Colors.white,),
+          child: IconButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              icon: Icon(
+                Icons.close,
+                color: Colors.white,
+              )),
         ),
         actions: [
           Padding(
-            padding:  EdgeInsets.only(right:30),
-            child: Icon(Icons.shopping_cart,color: Colors.white,),
-          )
+            padding: EdgeInsets.only(right: 30),
+            child: Icon(
+              Icons.shopping_cart,
+              size: 32,
+              color: Colors.white,
+            ),
+          ),
         ],
-
       ),
-      body:Bodywidght(bookDateModel: bookData!,),
+      body: Bodywidght(
+        bookDateModel: bookDateModel,
+      ),
     );
   }
 }

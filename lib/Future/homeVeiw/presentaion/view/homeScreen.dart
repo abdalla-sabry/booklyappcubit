@@ -1,3 +1,4 @@
+import 'package:booklyappcubit/Future/SearchScreen/presentaion/view/SearchScreen.dart';
 import 'package:booklyappcubit/Future/homeVeiw/presentaion/view/widght/MaincodeInHomwVeiw.dart';
 import 'package:booklyappcubit/constant.dart';
 import 'package:booklyappcubit/core/utilize/ContenerImages.dart';
@@ -25,10 +26,15 @@ class HomeScreen extends StatelessWidget {
         actions: [
           Padding(
               padding: EdgeInsets.only(right: 40, top: 30),
-              child: Icon(
-                Icons.search,
-                size: 32,
-                color: Colors.white,
+              child: GestureDetector(
+                onTap: (){
+                  Navigator.pushNamed(context, Searchscreen.routeName);
+                },
+                child: Icon(
+                  Icons.search,
+                  size: 32,
+                  color: Colors.white,
+                ),
               )),
         ],
       ),

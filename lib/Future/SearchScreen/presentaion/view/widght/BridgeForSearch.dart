@@ -8,7 +8,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../../../core/utilize/ContenerImages.dart';
 
-class Bradgebeforebestsellerwidgt extends StatelessWidget {
+class Bridgeforsearch extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<CubitForApi, StateForApi>(
       builder: (context, state) {
@@ -18,21 +18,21 @@ class Bradgebeforebestsellerwidgt extends StatelessWidget {
 
         return state is stateImageListLoading
             ? Container(
-                child: Center(
-                  child: CircularProgressIndicator(),
-                ),
-              )
+          child: Center(
+            child: CircularProgressIndicator(),
+          ),
+        )
             : state is stateImageListFailure
-                ? Center(
-                    child: Text('${state.error}'),
-                  )
-                : state is stateImageListSuccuse
-                    ?  Bestsellerwidgt(listOfBookDateModel: BlocProvider.of<CubitForApi>(context).listBooksModels,)
-                    : Container(
-                        child: Center(
-                          child: CircularProgressIndicator(),
-                        ),
-                      );
+            ? Center(
+          child: Text('${state.error}'),
+        )
+            : state is stateImageListSuccuse
+            ?  Bestsellerwidghtforsearch(listOfBookDateModel: BlocProvider.of<CubitForApi>(context).listBooksModels,)
+            : Container(
+          child: Center(
+            child: CircularProgressIndicator(),
+          ),
+        );
       },
     );
   }

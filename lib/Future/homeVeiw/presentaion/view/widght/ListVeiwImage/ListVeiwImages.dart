@@ -1,5 +1,5 @@
-import 'package:booklyappcubit/cubit/image_list_cubit.dart';
-import 'package:booklyappcubit/cubit/image_list_state.dart';
+import 'package:booklyappcubit/Future/homeVeiw/manger/image_list_cubit.dart';
+import 'package:booklyappcubit/Future/homeVeiw/manger/image_list_state.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -8,15 +8,16 @@ import '../../../../../../core/utilize/ContenerImages.dart';
 
 class listveiwforImages extends StatelessWidget {
   Widget build(BuildContext context) {
-    return BlocBuilder<ImageListCubit, ImageListState>(
+    var height = MediaQuery.of(context).size.height;
+    return BlocBuilder<CubitForApi, StateForApi>(
       builder: (context, state) {
         if (state is stateImageListIntial) {
-          BlocProvider.of<ImageListCubit>(context).getDataModel();
+          BlocProvider.of<CubitForApi>(context).getDataModel();
         }
 
         return state is stateImageListLoading
             ? Container(
-          height: 300,
+                height: 300,
                 child: Center(
                   child: CircularProgressIndicator(),
                 ),
@@ -38,17 +39,18 @@ class listveiwforImages extends StatelessWidget {
                               );
                             },
                             scrollDirection: Axis.horizontal,
-                            itemBuilder: (context, counter) =>
-                                BlocProvider.of<ImageListCubit>(context)
-                                    .listImageContener[counter],
-                            itemCount: BlocProvider.of<ImageListCubit>(context)
+                            itemBuilder: (context, counter) => Contenarimages(
+                                BookData: BlocProvider.of<CubitForApi>(context)
+                                .listBooksModels[counter],
+                                hight: height * .20),
+                            itemCount: BlocProvider.of<CubitForApi>(context)
                                 .listImageContener
                                 .length,
                           ),
                         ),
                       )
                     : Container(
-          height: 300,
+                        height: 300,
                         child: Center(
                           child: CircularProgressIndicator(),
                         ),

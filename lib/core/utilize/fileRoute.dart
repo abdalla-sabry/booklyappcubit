@@ -1,4 +1,5 @@
 import 'package:booklyappcubit/Future/BookVeiw/presntaion/view/BookDetilesView.dart';
+import 'package:booklyappcubit/Future/SearchScreen/presentaion/view/SearchScreen.dart';
 import 'package:flutter/cupertino.dart';
 
 import '../../Future/homeVeiw/presentaion/view/homeScreen.dart';
@@ -9,5 +10,6 @@ abstract class RoutesPass {
     HomeScreen.routeName: (context) => HomeScreen(),
     Splashscreen.routeName: (context) => Splashscreen(),
    BookDetilesView.routeName:(context)=>BookDetilesView(),
+   Searchscreen.routeName:(context)=>Searchscreen()
   };
 }

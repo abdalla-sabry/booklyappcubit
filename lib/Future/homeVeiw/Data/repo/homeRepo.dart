@@ -5,41 +5,12 @@ import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
 
 abstract class HomeRepe {
-  Future<Either<Failers, List<BookDateModel>>> FetchFutureBooks();
-  Future< List<BookDateModel>> FetchBestSellerBooks({required String catioresForBooks});
+  Future<Either<Failers, List<BookDateModel>> >FetchFutureBooks();
+  Future<List<BookDateModel>> FetchBestSellerBooks(
+      {required String catioresForBooks});
 }
 
-class HomePageMehtod extends HomeRepe {
-  @override
-  Future< List<BookDateModel>>  FetchBestSellerBooks(
-      {required String catioresForBooks}) async {
-    Dio dio = Dio();
-    try {
-      Response response =
-      await dio.get(kUrl, queryParameters: {'q': catioresForBooks});
-      print('+++++++++++++++++++++++++++++++++++++++++  ')  ;
-      print('+++++++++++++++++++++++++++++++++++++++++  ')  ;
-      List items=response.data['items'];
-      if(items == null){
-print('the list is null');
 
-      }else{
-        List <BookDateModel>booksDataModel=[];
-        for (var item in items){
-          booksDataModel.add(BookDateModel.fromJson(item));
-        }
-        print('finsh get data succuse');
-        return booksDataModel;
-      }
-    }catch(e){
-      print(e);
-    }
-return [];
-  }
 
-  @override
-  Future<Either<Failers, List<BookDateModel>>> FetchFutureBooks() {
-    // TODO: implement FetchFutureBooks
-    throw UnimplementedError();
-  }
-}
+
+
