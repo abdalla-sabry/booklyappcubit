@@ -1,6 +1,6 @@
 import 'package:booklyappcubit/Future/homeVeiw/presentaion/view/widght/bestsellerWidght/bestSellerContainerDetials.dart';
 import 'package:booklyappcubit/Future/homeVeiw/presentaion/viewModel/BookDateModel.dart';
-import 'package:booklyappcubit/core/utilize/ContenerImages.dart';
+import 'package:booklyappcubit/Future/homeVeiw/presentaion/view/widght/bestsellerWidght/ContenerImages.dart';
 import 'package:flutter/cupertino.dart';
 
 class Bestsellercontainer extends StatelessWidget {
@@ -14,7 +14,7 @@ class Bestsellercontainer extends StatelessWidget {
       height: 110,
       child: Row(
         children: [
-          Contenarimages(BookData: bookDateModel,hight: 105,),
+          Contenarimages(BookData: bookDateModel,hight: 95,),
 
           SizedBox(width: 30,),
       Bestsellercontainerdetials(bookDateModel: bookDateModel)

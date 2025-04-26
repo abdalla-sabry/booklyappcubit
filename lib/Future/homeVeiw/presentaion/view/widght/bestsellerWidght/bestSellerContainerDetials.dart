@@ -4,8 +4,8 @@ import 'package:booklyappcubit/core/utilize/fontStyle.dart';
 import 'package:flutter/cupertino.dart';
 
 class Bestsellercontainerdetials extends StatelessWidget {
-   Bestsellercontainerdetials({required this.bookDateModel});
-BookDateModel bookDateModel;
+  Bestsellercontainerdetials({required this.bookDateModel});
+  BookDateModel bookDateModel;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -23,7 +23,9 @@ BookDateModel bookDateModel;
         Container(
           width: 250,
           child: Text(
-            '${bookDateModel.authors}',
+            bookDateModel.authors != []
+                ? '${bookDateModel.authors}'
+                : 'not write',
             style: styleForText.styleText14,
             overflow: TextOverflow.ellipsis,
             maxLines: 1,
@@ -34,11 +36,14 @@ BookDateModel bookDateModel;
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text('${bookDateModel.price} £',style: styleForText.styleText20.copyWith(
-                fontSize: 16
-              ),          overflow: TextOverflow.ellipsis,
+              Text(
+                '${bookDateModel.price ?? 'free'} £',
+                style: styleForText.styleText20.copyWith(fontSize: 16),
+                overflow: TextOverflow.ellipsis,
+              ),
+              Ratecontaner(
+                bookDateModel: bookDateModel,
               )
-              ,Ratecontaner(bookDateModel: bookDateModel,)
             ],
           ),
         )

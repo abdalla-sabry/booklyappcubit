@@ -4,7 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../../../../core/utilize/ContenerImages.dart';
+import '../bestsellerWidght/ContenerImages.dart';
 
 class listveiwforImages extends StatelessWidget {
   Widget build(BuildContext context) {
@@ -41,10 +41,10 @@ class listveiwforImages extends StatelessWidget {
                             scrollDirection: Axis.horizontal,
                             itemBuilder: (context, counter) => Contenarimages(
                                 BookData: BlocProvider.of<CubitForApi>(context)
-                                .listBooksModels[counter],
+                                    .listBooksModels[counter],
                                 hight: height * .20),
                             itemCount: BlocProvider.of<CubitForApi>(context)
-                                .listImageContener
+                                .listBooksModels
                                 .length,
                           ),
                         ),

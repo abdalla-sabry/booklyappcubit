@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../../../../../core/utilize/ContenerImages.dart';
+import 'bestsellerWidght/ContenerImages.dart';
 import '../../../../../core/utilize/fontStyle.dart';
 import 'ListVeiwImage/ListVeiwImages.dart';
 

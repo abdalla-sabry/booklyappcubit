@@ -1,7 +1,7 @@
 import 'package:booklyappcubit/Future/SearchScreen/presentaion/view/SearchScreen.dart';
 import 'package:booklyappcubit/Future/homeVeiw/presentaion/view/widght/MaincodeInHomwVeiw.dart';
 import 'package:booklyappcubit/constant.dart';
-import 'package:booklyappcubit/core/utilize/ContenerImages.dart';
+import 'package:booklyappcubit/Future/homeVeiw/presentaion/view/widght/bestsellerWidght/ContenerImages.dart';
 import 'package:booklyappcubit/core/utilize/logo.dart';
 import 'package:booklyappcubit/core/utilize/titleContaner.dart';
 import 'package:flutter/material.dart';

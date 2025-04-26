@@ -1,6 +1,6 @@
 import 'package:booklyappcubit/Future/BookVeiw/presntaion/view/widget/imageContainerForBookDetiles.dart';
 import 'package:booklyappcubit/Future/homeVeiw/presentaion/viewModel/BookDateModel.dart';
-import 'package:booklyappcubit/core/utilize/ContenerImages.dart';
+import 'package:booklyappcubit/Future/homeVeiw/presentaion/view/widght/bestsellerWidght/ContenerImages.dart';
 import 'package:flutter/cupertino.dart';
 
 import 'BookItemsContainer.dart';

@@ -13,9 +13,12 @@ BookDateModel bookDateModel;
       children: [
         Icon(Icons.star,color: Color(0xffFFDD4F),),
         SizedBox(width: 3.6,),
-        Text('${bookDateModel.averageRating}',style: styleForText.styleText18semiBold,),
+        bookDateModel.averageRating!=null?Text('${bookDateModel.averageRating}',style: styleForText.styleText18semiBold,):Text('no rate',style: styleForText.styleText18semiBold.copyWith(
+          fontSize:14
+        ),),
         SizedBox(width: 9,),
-        Text('(${bookDateModel.ratingsCount})',style: styleForText.styleText16,)
+       bookDateModel.ratingsCount!=null? Text('(${bookDateModel.ratingsCount})',style: styleForText.styleText16,):        Text('(none)',style: styleForText.styleText16,)
+
       ],
     );
   }
