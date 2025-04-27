@@ -20,6 +20,9 @@ class Recommendationimagecontainer extends StatelessWidget {
 
     return BlocBuilder<CubitSimalerBooks, StateSimalerBooksState>(
       builder: (context, state) {
+        if (state is StateSimalerBooksInitial){
+          BlocProvider.of<CubitSimalerBooks>(context).FetichSimalerBook();
+        }
         return state is StateSimalerBooksLoading
             ? Center(
                 child: CircularProgressIndicator(),
@@ -42,10 +45,10 @@ class Recommendationimagecontainer extends StatelessWidget {
                                 width: 10,
                               );
                             },
-                            itemCount: listOfBookDateModel!.length,
+                            itemCount:BlocProvider.of<CubitSimalerBooks>(context).listSimalerBooksModel!.length,
                             itemBuilder: (context, counter) {
                               return Contenarimages(
-                                BookData: listOfBookDateModel![counter],
+                                BookData: BlocProvider.of<CubitSimalerBooks>(context).listSimalerBooksModel![counter],
                                 hight: 50,
                               );
                             },

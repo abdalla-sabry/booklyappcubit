@@ -10,7 +10,7 @@ class ApiServise {
     try {
       Dio dio = Dio();
       Response response = await dio.get(
-          '${kUrl}volumes?q=${searchPoint ?? 'harry potter'}&filtering=free-book$SimalerBook');
+          '${kUrl}volumes?q=${searchPoint ?? 'harry potter'}&filtering=free-book${SimalerBook??''} ');
 
       List items = response.data['items'];
       if(items ==null){

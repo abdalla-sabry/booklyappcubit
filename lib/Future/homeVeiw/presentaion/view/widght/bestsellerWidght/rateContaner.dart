@@ -13,11 +13,11 @@ BookDateModel bookDateModel;
       children: [
         Icon(Icons.star,color: Color(0xffFFDD4F),),
         SizedBox(width: 3.6,),
-        bookDateModel.averageRating!=null?Text('${bookDateModel.averageRating}',style: styleForText.styleText18semiBold,):Text('no rate',style: styleForText.styleText18semiBold.copyWith(
+        bookDateModel.averageRating!=null?Text('${bookDateModel.averageRating}',style: styleForText.styleText18semiBold,):Text('0',style: styleForText.styleText18semiBold.copyWith(
           fontSize:14
         ),),
         SizedBox(width: 9,),
-       bookDateModel.ratingsCount!=null? Text('(${bookDateModel.ratingsCount})',style: styleForText.styleText16,):        Text('(none)',style: styleForText.styleText16,)
+       bookDateModel.ratingsCount!=null? Text('(${bookDateModel.ratingsCount})',style: styleForText.styleText16,):        Text('(0)',style: styleForText.styleText16,)
 
       ],
     );

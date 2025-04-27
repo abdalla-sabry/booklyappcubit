@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/get.dart';
 
+import 'Future/BookVeiw/manger/cubitSimaler/simaler_books_cubit.dart';
 import 'Future/homeVeiw/manger/image_list_cubit.dart';
 
 void main() {
@@ -18,13 +19,19 @@ class BooklyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) => CubitForApi(),
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(
+          create: (context) => CubitForApi(),
+        ),
+        BlocProvider(
+          create: (context) => CubitSimalerBooks(),
+        ),
+      ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        theme: ThemeData.dark().copyWith(
-            scaffoldBackgroundColor: kPrimaryColor
-        ),
+        theme:
+            ThemeData.dark().copyWith(scaffoldBackgroundColor: kPrimaryColor),
         routes: RoutesPass.routes,
         initialRoute: Splashscreen.routeName,
       ),

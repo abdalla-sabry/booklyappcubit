@@ -7,6 +7,7 @@ class BookDateModel {
   final int? ratingsCount;
   final double? price;
   final String? currencyCode;
+  final String? previewLink; // 👈 added this line
 
   BookDateModel({
     required this.id,
@@ -17,6 +18,7 @@ class BookDateModel {
     this.ratingsCount,
     this.price,
     this.currencyCode,
+    this.previewLink, // 👈 added this line
   });
 
   factory BookDateModel.fromJson(Map<String, dynamic> json) {
@@ -38,6 +40,7 @@ class BookDateModel {
           ? (saleInfo['listPrice']['amount'] as num?)?.toDouble()
           : null,
       currencyCode: saleInfo['listPrice']?['currencyCode'],
+      previewLink: volumeInfo['previewLink'], // 👈 added this line
     );
   }
 }

@@ -13,20 +13,20 @@ part 'simaler_books_state.dart';
 class CubitSimalerBooks extends Cubit<StateSimalerBooksState> {
   CubitSimalerBooks() : super(StateSimalerBooksInitial());
   List<Contenarimages> listImageContener = [];
-  List<BookDateModel> listBooksModels = [];
+  List<BookDateModel> listSimalerBooksModel = [];
     Future<void> FetichSimalerBook({String? seachPoint}) async {
       try {
         emit(StateSimalerBooksLoading());
         HomeMehtodRepo repo = HomeMehtodRepo();
         Either<Failers, List<BookDateModel>> items =
-        await repo.FetchFutureBooks( ); //Must be Not future
+        await repo.FetchFutureBooks( searchPoint: seachPoint); //Must be Not future
         items.fold(
               (falure) {
             emit(StateSimalerBooksFailure(error: falure.error));
           },
               (thelist) {
-            listBooksModels = thelist;
-            for (var item in listBooksModels) {
+            listSimalerBooksModel = thelist;
+            for (var item in listSimalerBooksModel) {
               listImageContener.add(Contenarimages(BookData: item, hight: 100));
             }
             emit(StateSimalerBooksSuccess());

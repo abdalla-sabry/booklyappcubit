@@ -1,3 +1,4 @@
+import 'package:booklyappcubit/Future/BookVeiw/manger/cubitSimaler/simaler_books_cubit.dart';
 import 'package:booklyappcubit/Future/homeVeiw/manger/image_list_cubit.dart';
 import 'package:booklyappcubit/Future/homeVeiw/presentaion/view/homeScreen.dart';
 import 'package:booklyappcubit/core/utilize/api_servise.dart';
@@ -16,6 +17,7 @@ class Customtextfeild extends StatelessWidget {
       child: TextFormField(
         onFieldSubmitted: (value) {
           BlocProvider.of<CubitForApi>(context).getDataModel(seachPoint: value);
+          BlocProvider.of<CubitSimalerBooks>(context).FetichSimalerBook(seachPoint: value);
           Navigator.pushAndRemoveUntil(
             context,
             MaterialPageRoute(builder: (context) => HomeScreen()),
@@ -24,6 +26,7 @@ class Customtextfeild extends StatelessWidget {
         obscureText: false,
         style: styleForText.styleText16,
         decoration: InputDecoration(
+
           hintText: 'search',
           suffix: Icon(
             Icons.search,

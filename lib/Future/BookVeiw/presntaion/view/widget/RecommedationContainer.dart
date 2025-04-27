@@ -11,29 +11,26 @@ class Recommedationcontainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) => CubitSimalerBooks(),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          SizedBox(
-            height: 30,
-          ),
-          Padding(
-            padding: EdgeInsets.only(left: 25),
-            child: Text(
-              'You can also like', style: styleForText.styleText16.copyWith(
-                color: Colors.white
-            ),),
-          ),
-          SizedBox(
-            height: 10,
-          ),
-          Recommendationimagecontainer()
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        SizedBox(
+          height: 30,
+        ),
+        Padding(
+          padding: EdgeInsets.only(left: 25),
+          child: Text(
+            'You can also like', style: styleForText.styleText16.copyWith(
+              color: Colors.white
+          ),),
+        ),
+        SizedBox(
+          height: 10,
+        ),
+        Recommendationimagecontainer()
 
 
-        ],
-      ),
+      ],
     );
   }
 }
